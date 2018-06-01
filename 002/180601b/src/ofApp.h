@@ -10,8 +10,6 @@ public:
     void draw();
     
     ofShader shader;
-    ofVideoPlayer video;
-    
     ofVideoGrabber grabber;
     
 };
