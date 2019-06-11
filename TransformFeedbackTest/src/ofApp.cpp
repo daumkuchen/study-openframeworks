@@ -4,6 +4,7 @@
 void ofApp::setup(){
     
     ofBackground(0);
+	ofSetFrameRate(60);
     
     float * position = new float[numParticles * 3];
     for(int i = 0; i<numParticles; i++){

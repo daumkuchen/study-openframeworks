@@ -4,7 +4,8 @@
 void ofApp::setup(){
     
     ofSetVerticalSync(false);
-    ofBackground(0, 0, 0);
+	ofSetFrameRate(60);
+    ofBackground(0);
     ofDisableAlphaBlending();
     
     cam.setupPerspective();

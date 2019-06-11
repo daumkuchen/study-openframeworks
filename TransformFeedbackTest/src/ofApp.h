@@ -24,7 +24,7 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
     
-    const int numParticles = 200000;
+    const int numParticles = 500000;
     ofShader renderShader;
     ofxTF tf;
     
