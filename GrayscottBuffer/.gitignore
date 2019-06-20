@@ -1,0 +1,26 @@
+.DS_Store
+
+bin/*
+!data
+bin/data/settings.xml
+
+# Mac
+resources/*
+config.make
+GrayscottBuffer.xcodeproj
+Makefile
+openFrameworks-Info.plist
+Project.xcconfig
+# addons.make
+
+# Win
+GrayscottBuffer.sdf
+GrayscottBuffer.sln
+GrayscottBuffer.vcxproj
+GrayscottBuffer.vcxproj.filters
+GrayscottBuffer.vcxproj.user
+# addons.make
+icon.aps
+icon.rc
+obj/*
+.vs
