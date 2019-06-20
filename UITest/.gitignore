@@ -1,0 +1,26 @@
+.DS_Store
+
+bin/*
+!data
+bin/data/settings.xml
+
+# Mac
+resources/*
+config.make
+UITest.xcodeproj
+Makefile
+openFrameworks-Info.plist
+Project.xcconfig
+# addons.make
+
+# Win
+UITest.sdf
+UITest.sln
+UITest.vcxproj
+UITest.vcxproj.filters
+UITest.vcxproj.user
+# addons.make
+icon.aps
+icon.rc
+obj/*
+.vs

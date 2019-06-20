@@ -21,17 +21,20 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    float size = loop_count / bpm * 100;
+    float size = loop_count / bpm * 200;
     ofSetColor(255, 0, 255);
     ofDrawEllipse(250, 250, size, size);
     
     ofSetWindowTitle(ofToString(ofGetFrameRate()));
     
     ofSetColor(0);
-    ofDrawBitmapString("COUNT: " + ofToString(frame_count), 10, 20);
+    ofDrawBitmapString("SIZE: " + ofToString(loop_count / bpm), 10, 20);
+    
+    ofSetColor(0);
+    ofDrawBitmapString("COUNT: " + ofToString(frame_count), 10, 40);
     
     ofSetColor(255, 0, 255);
-    ofDrawBitmapString("BPM:  " + ofToString(bpm), 10, 40);
+    ofDrawBitmapString("BPM: " + ofToString(bpm), 10, 60);
 
 }
 
@@ -65,6 +68,9 @@ void ofApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
 
+    bpm = frame_count;
+    frame_count = 0;
+    
 }
 
 //--------------------------------------------------------------
