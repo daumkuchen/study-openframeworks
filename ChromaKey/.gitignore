@@ -1,0 +1,26 @@
+.DS_Store
+
+bin/*
+!data
+bin/data/settings.xml
+
+# Mac
+resources/*
+config.make
+ChromaKey.xcodeproj
+Makefile
+openFrameworks-Info.plist
+Project.xcconfig
+# addons.make
+
+# Win
+ChromaKey.sdf
+ChromaKey.sln
+ChromaKey.vcxproj
+ChromaKey.vcxproj.filters
+ChromaKey.vcxproj.user
+# addons.make
+icon.aps
+icon.rc
+obj/*
+.vs

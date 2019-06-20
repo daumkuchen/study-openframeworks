@@ -12,6 +12,6 @@ public:
     ofShader chromakeyShader;
     ofShader backgroundShader;
     
-    ofVideoGrabber grabber;
+    ofVideoGrabber video;
     
 };

@@ -2,25 +2,28 @@
 
 void ofApp::setup(){
     
-    ofSetFrameRate(60);
-    ofSetWindowTitle("Chroma Key Test.");
-    
-    grabber.initGrabber(ofGetWidth(), ofGetHeight());
-    grabber.setDeviceID(1);
+	ofSetFrameRate(60);
+
+	video.initGrabber(ofGetWidth(), ofGetHeight());
+	video.setDeviceID(1);
     
 }
 
 void ofApp::update(){
     
-    grabber.update();
+	video.update();
     
 }
 
 void ofApp::draw(){
-    
-    // ofBackgroundGradient(ofColor(128), ofColor(31), OF_GRADIENT_LINEAR);
-    // ofBackground(255, 0, 127);
-    // ofBackground(0, 0, 0);
+
+	ofSetWindowTitle(ofToString(ofGetFrameRate()));
+
+	// video.draw(0, 0);
+
+     ofBackgroundGradient(ofColor(128), ofColor(31), OF_GRADIENT_LINEAR);
+     ofBackground(255, 0, 127);
+     ofBackground(0, 0, 0);
     
     // 閾値を指定
     float difference = ofMap(mouseX, 0, ofGetWidth(), 0.0, 2.0);
@@ -37,6 +40,7 @@ void ofApp::draw(){
     chromakeyShader.begin();
     chromakeyShader.setUniform3f("chromaKeyColor", ofVec3f(0.0, 0.0, 0.0));
     chromakeyShader.setUniform1f("difference", difference);
-    grabber.draw(0, 0);
+    video.draw(0, 0);
     chromakeyShader.end();
+
 }
