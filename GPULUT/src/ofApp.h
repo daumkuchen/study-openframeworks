@@ -37,4 +37,6 @@ public:
 	string description;
 	float thumbnailWidth, thumbnailHeight;
 
+	// https://github.com/yasuhirohoshino/ofxGpuLut
+
 };

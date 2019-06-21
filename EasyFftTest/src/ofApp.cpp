@@ -1,81 +1,55 @@
 #include "ofApp.h"
 
-//--------------------------------------------------------------
-void ofApp::setup(){
+void ofApp::setup() {
 
-	fft.setup(sampleNum);
+	ofSetVerticalSync(true);
+	ofSetFrameRate(60);
+	fft.setup();
 
 }
 
-//--------------------------------------------------------------
-void ofApp::update(){
+void ofApp::update() {
 
 	fft.update();
 
 }
 
-//--------------------------------------------------------------
-void ofApp::draw(){
+void ofApp::draw() {
 
-	ofLog() << fft.getBins().size() << endl;
-	ofBackground(0);
-	for (int i = 0; i < fft.getBins().size(); i++) {
-		ofDrawCircle(ofGetWidth() * 2 * float(i) / sampleNum, ofGetHeight() * (1 - fft.getBins()[i]), 2);
+	fft.drawBars();
+	fft.drawDebug();
+
+	ofNoFill();
+	ofDrawRectangle(824, 0, 200, 200);
+	ofDrawRectangle(824, 200, 200, 200);
+	ofDrawRectangle(824, 400, 200, 200);
+	ofDrawRectangle(824, 600, 200, 200);
+
+	fft.drawHistoryGraph(ofPoint(824, 0), LOW);
+	fft.drawHistoryGraph(ofPoint(824, 200), MID);
+	fft.drawHistoryGraph(ofPoint(824, 400), HIGH);
+	fft.drawHistoryGraph(ofPoint(824, 600), MAXSOUND);
+	ofDrawBitmapString("LOW", 850, 20);
+	ofDrawBitmapString("HIGH", 850, 420);
+	ofDrawBitmapString("MID", 850, 220);
+	ofDrawBitmapString("MAX VOLUME", 850, 620);
+
+	ofSetColor(0);
+	ofDrawBitmapString("Press 'r' or 'q' to toggle normalization of values", 20, 320);
+
+}
+
+void ofApp::keyPressed(int key) {
+
+	//toggle between normalized and not to get a sense of the effects
+	//You will need to set a volume range if you're not normalizing everything - but this will depend on your sound source and input type to determine the maximum volume range of your codez
+
+	if (key == 'q') {
+		fft.setVolumeRange(100);
+		fft.setNormalize(false);
 	}
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+	if (key == 'r') {
+		fft.setNormalize(true);
+	}
 
 }

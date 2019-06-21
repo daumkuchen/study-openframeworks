@@ -1,2 +1,2 @@
-ofxFft
 ofxGui
+ofxFft
