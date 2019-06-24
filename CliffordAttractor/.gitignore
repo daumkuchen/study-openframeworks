@@ -1,0 +1,26 @@
+.DS_Store
+
+bin/*
+!data
+bin/data/settings.xml
+
+# Mac
+resources/*
+config.make
+CliffordAttractor.xcodeproj
+Makefile
+openFrameworks-Info.plist
+Project.xcconfig
+# addons.make
+
+# Win
+CliffordAttractor.sdf
+CliffordAttractor.sln
+CliffordAttractor.vcxproj
+CliffordAttractor.vcxproj.filters
+CliffordAttractor.vcxproj.user
+# addons.make
+icon.aps
+icon.rc
+obj/*
+.vs

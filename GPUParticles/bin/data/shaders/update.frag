@@ -5,6 +5,7 @@
 
 // ユーティリティのインクルード
 #pragma include "util.frag"
+
 // 4D Simplex Noiseのインクルード
 #pragma include "noise4D.frag"
 
@@ -17,9 +18,11 @@ uniform vec3 u_emitterPos;
 uniform vec3 u_prevEmitterPos;
 
 void main(void){
+
     vec2 st = gl_TexCoord[0].st;
     // 前の位置情報とパーティクル初期化からの経過時間を取得
     vec4 posAndAge = texture2DRect(u_posAndAgeTex,st);
+    
     // 前の速度と生存期間を取得
     vec4 velAndMaxAge = texture2DRect(u_velAndMaxAgeTex,st);
     
