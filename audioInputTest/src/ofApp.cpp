@@ -97,9 +97,10 @@ void ofApp::draw() {
 	ofSetLineWidth(3);
 
 	ofBeginShape();
-	for (unsigned int i = 0; i < right.size(); i++) {
-		ofVertex(i * 2, 100 - right[i] * 180.0f);
-	}
+	//for (unsigned int i = 0; i < right.size(); i++) {
+	//	ofVertex(i * 2, 100 - right[i] * 180.0f);
+	//}
+	ofVertex(2, 100 - scaledVol);
 	ofEndShape(false);
 
 	ofPopMatrix();
