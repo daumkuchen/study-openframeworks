@@ -1,0 +1,26 @@
+.DS_Store
+
+bin/*
+!data
+bin/data/settings.xml
+
+# Mac
+resources/*
+config.make
+OpencvHaarFinderExample.xcodeproj
+Makefile
+openFrameworks-Info.plist
+Project.xcconfig
+# addons.make
+
+# Win
+OpencvHaarFinderExample.sdf
+OpencvHaarFinderExample.sln
+OpencvHaarFinderExample.vcxproj
+OpencvHaarFinderExample.vcxproj.filters
+OpencvHaarFinderExample.vcxproj.user
+# addons.make
+icon.aps
+icon.rc
+obj/*
+.vs

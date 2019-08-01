@@ -1,0 +1,26 @@
+.DS_Store
+
+bin/*
+!data
+bin/data/settings.xml
+
+# Mac
+resources/*
+config.make
+OpencvCamera3.xcodeproj
+Makefile
+openFrameworks-Info.plist
+Project.xcconfig
+# addons.make
+
+# Win
+OpencvCamera3.sdf
+OpencvCamera3.sln
+OpencvCamera3.vcxproj
+OpencvCamera3.vcxproj.filters
+OpencvCamera3.vcxproj.user
+# addons.make
+icon.aps
+icon.rc
+obj/*
+.vs

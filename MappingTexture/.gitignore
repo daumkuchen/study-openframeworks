@@ -1,0 +1,26 @@
+.DS_Store
+
+bin/*
+!data
+bin/data/settings.xml
+
+# Mac
+resources/*
+config.make
+MappingTexture.xcodeproj
+Makefile
+openFrameworks-Info.plist
+Project.xcconfig
+# addons.make
+
+# Win
+MappingTexture.sdf
+MappingTexture.sln
+MappingTexture.vcxproj
+MappingTexture.vcxproj.filters
+MappingTexture.vcxproj.user
+# addons.make
+icon.aps
+icon.rc
+obj/*
+.vs

@@ -1,0 +1,26 @@
+.DS_Store
+
+bin/*
+!data
+bin/data/settings.xml
+
+# Mac
+resources/*
+config.make
+TransformFeedbackTest.xcodeproj
+Makefile
+openFrameworks-Info.plist
+Project.xcconfig
+# addons.make
+
+# Win
+TransformFeedbackTest.sdf
+TransformFeedbackTest.sln
+TransformFeedbackTest.vcxproj
+TransformFeedbackTest.vcxproj.filters
+TransformFeedbackTest.vcxproj.user
+# addons.make
+icon.aps
+icon.rc
+obj/*
+.vs

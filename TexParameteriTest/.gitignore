@@ -1,0 +1,26 @@
+.DS_Store
+
+bin/*
+!data
+bin/data/settings.xml
+
+# Mac
+resources/*
+config.make
+TexParameteriTest.xcodeproj
+Makefile
+openFrameworks-Info.plist
+Project.xcconfig
+# addons.make
+
+# Win
+TexParameteriTest.sdf
+TexParameteriTest.sln
+TexParameteriTest.vcxproj
+TexParameteriTest.vcxproj.filters
+TexParameteriTest.vcxproj.user
+# addons.make
+icon.aps
+icon.rc
+obj/*
+.vs
